@@ -1,0 +1,10 @@
+<p>Please find your name</p>
+
+
+<div>
+  <div *ngFor="let user of tree| async">
+    <a routerLink="tree/{{user.id}}" (click)="setCurrentUser(user.id)">{{user.name}}</a>
+  </div>
+</div>
+
+

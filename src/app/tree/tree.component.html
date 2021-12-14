@@ -1,0 +1,33 @@
+<div *ngIf="userTree | async as userTree">
+<!--  <div class="area">-->
+<!--    <div *ngIf="userTree.parent1.parent1" class="area__item">-->
+<!--      Parent 1-->
+<!--      <a routerLink="/member/{{userTree.parent1?.parent1.id}}">{{userTree.parent1?.parent1.name}}</a>-->
+<!--    </div>-->
+<!--    <div *ngIf="userTree.parent2" class="area__item">-->
+<!--      Parent 2-->
+<!--      <a routerLink="/member/{{userTree.parent2?.id}}">{{userTree.parent2?.name}}</a>-->
+<!--    </div>-->
+<!--  </div>-->
+  <div class="area">
+    <div *ngIf="userTree.parent1" class="area__item">
+      Parent 1
+      <a routerLink="/member/{{userTree.parent1?.id}}">{{userTree.parent1?.name}}</a>
+    </div>
+    <div *ngIf="userTree.parent2" class="area__item">
+      Parent 2
+      <a routerLink="/member/{{userTree.parent2?.id}}">{{userTree.parent2?.name}}</a>
+    </div>
+  </div>
+  <div class="area">
+    <div class="area__item">
+      You
+      <a routerLink="/member/{{userTree.id}}">{{userTree.name}}</a>
+    </div>
+    <div *ngIf="userTree.spouse" class="area__item">
+      Spouse
+      <a routerLink="/member/{{userTree.spouse?.id}}">{{userTree.spouse?.name}}</a>
+    </div>
+  </div>
+
+</div>
