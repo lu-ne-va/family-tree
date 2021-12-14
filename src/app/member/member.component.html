@@ -1,8 +1,16 @@
 <div *ngIf="user | async as user">
   <form *ngIf="(userId | async) === currentUserId">
     <div>
-      <label for="name"></label>
+      <label for="name">name</label>
       <input [(ngModel)]="user.name" id="name" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div>
+      <label for="born">born</label>
+      <input [(ngModel)]="user.born" id="born" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div>
+      <label for="hometown">hometown</label>
+      <input [(ngModel)]="user.hometown" id="hometown" [ngModelOptions]="{standalone: true}">
     </div>
   </form>
   <div *ngIf="(userId | async)  !== currentUserId">
